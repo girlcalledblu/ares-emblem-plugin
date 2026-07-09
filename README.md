@@ -1,11 +1,11 @@
 # Overview
 This plugin allows you to add custom styling to character pages and icons based on demographics, groups, or a custom field. This plugin requires some comfort with revising the `custon_char_fields.rb` file, as well as the handlebar (hbs) files in the ares-webportal directory. I've tried to give very thorough walkthrough here, but if you need help, you can find me on the Discord server!
 
-### Plugin Install
+## Plugin Install
 
 First, install the plugin.
 
-In the game, run plugin/install <github url>.
+In the game, run plugin/install `<github url>`.
 
 ## Configuration: Aresmush Directory
 
