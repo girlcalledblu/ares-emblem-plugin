@@ -1,4 +1,4 @@
-## Overview
+# Overview
 This plugin allows you to add custom styling to character pages and icons based on demographics, groups, or a custom field. This plugin requires some comfort with revising the `custon_char_fields.rb` file, as well as the handlebar (hbs) files in the ares-webportal directory. I've tried to give very thorough walkthrough here, but if you need help, you can find me on the Discord server!
 
 ### Plugin Install
@@ -7,7 +7,7 @@ First, install the plugin.
 
 In the game, run plugin/install <github url>.
 
-### Configuration: Aresmush Directory
+## Configuration: Aresmush Directory
 
 In `aresmush/plugins/profile/custom_char_fields.rb`, you will need to add the following line to `def self.get_fields_for_viewing(char, viewer)`:
 
@@ -22,11 +22,11 @@ If you have no other fields in this file, it should look like this:
         }
       end
 ```
-### Configuration: Ares-Webportal Directory
+## Configuration: Ares-Webportal Directory
 
 Choose whether or not you want both character profiles and icons to be customized based on your chosen emblems, or just one or the other. Then update the following files in the `ares-webportal` directory.
 
-#### Character Profiles
+### Character Profiles
 
 Navigate to `ares-webportal/app/templates/char.hbs`.
 
@@ -38,7 +38,7 @@ Scroll down to line 50, and add a new line with your closing div, `</div>`. You 
 
 This create a wrap-around for your profiles so you can add the necessary styling.
 
-#### Icons
+### Icons
 
 Navigate to `ares-webportal/app/components/char-icon.hbs`.
 
@@ -48,7 +48,7 @@ In here, you are just adding another class to the div that already exists at lin
 
 This creates a wrap-around for your icons so you can add the necessary styling.
 
-### Configuration: Emblem Config
+## Configuration: Emblem Config
 
 The last step is to set up your in-game config for emblem. Navigate to the plugin's YML file in the Game Setup menu. You will want to decide if your emblem is based on a demographic or a group (or if you want to assign them all with custom fields).
 
