@@ -65,4 +65,12 @@ emblem:
 
 In Faraday's default setup, this will assign Navy or Marines to each character's emblem. You could even, again using Faraday's defaults as examples, set it to Colony and that will assign one of the starting Colonies to each character's emblem.
 
-<b>Please note,</b> if you are using free-form demographics as a field, it will create a lot of different emblem types and base it entirely on each player's individual response (for example, if you have two booksellers and one spells it Bookseller and another spells it Book Seller, it will create a different emblem). Use demographics with care!
+<b>Please note,</b> if you are using freeform demographics as a field, it will create a lot of different emblem types and base it entirely on each player's individual response (for example, if you have two booksellers and one spells it Bookseller and another spells it Book Seller, it will create a different emblem). Use demographics with care!
+
+<b> Please, PLEASE note,</b> case is going to count! So, please make sure you are using title case (i.e. 'Group' instead of 'group').
+
+### Last Notes Before Styling
+
+If you're noticing that things don't appear to be working, (i.e. the class is still just 'emblem_') try `load profile`.
+
+## Styling!
