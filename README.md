@@ -15,7 +15,8 @@ In `aresmush/plugins/profile/custom_char_fields.rb`, you will need to add the fo
 
 If you have no other fields in this file, it should look like this:
 
-```      def self.get_fields_for_viewing(char, viewer)
+```
+      def self.get_fields_for_viewing(char, viewer)
         return {
           emblem: (Character.derive_emblem(char) || "").gsub(" ","-")
         }
