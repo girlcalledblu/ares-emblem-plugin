@@ -28,6 +28,8 @@ Choose whether or not you want both character profiles and icons to be customize
 
 ### Character Profiles
 
+<b>Please note,</b> this may cause merge issues later as you are touching the core code! Proceed with caution!
+
 Navigate to `ares-webportal/app/templates/char.hbs`.
 
 In this file, you will want to add a new line right at the top of the file:
@@ -40,13 +42,17 @@ This create a wrap-around for your profiles so you can add the necessary styling
 
 ### Icons
 
-Navigate to `ares-webportal/app/components/char-icon.hbs`.
+On the Web Portal, navigate to Custom Code Hooks by going to Admin > Setup.
 
-In here, you are just adding another class to the div that already exists at line 1. Your final div should look like this:
+Add the following line to `custom_icon_classes.rb`:
 
-`<div class="char-icon-container emblem_{{this.model.char.custom.emblem}}">`
+```
+def self.custom_icon_classes(char)
+  return (Character.derive_emblem(char) || "").gsub(" ","-")
+end
+```
 
-This creates a wrap-around for your icons so you can add the necessary styling.
+This this allows you add styling based on how you configured your emblem—which is our next step!
 
 ## Configuration: Emblem Config
 
